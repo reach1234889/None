@@ -18,7 +18,7 @@ load_dotenv()
 # Bot configuration
 TOKEN = os.getenv('DISCORD_TOKEN')
 VPS_STORAGE_FILE = 'vps_data.json'
-ADMIN_ROLE_ID = 1376177459870961694  # Admin role ID
+ADMIN_ROLE_ID = 1333473140839551149  # Admin role ID
 
 # Initialize bot with command prefix '!'
 class CustomBot(commands.Bot):
