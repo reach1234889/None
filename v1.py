@@ -882,7 +882,7 @@ async def create_vps_command(ctx, ram: int, cpu: int, disk: int):
             embed.add_field(name="Username", value=username, inline=False)
             embed.add_field(name="Password", value=password, inline=False)
             embed.add_field(name="VPS ID", value=vps_id, inline=False)
-             embed.add_field(name="Resources", value=f"RAM: {ram}MB\nCPU: {cpu} cores\nDisk: {disk}GB", inline=False)
+            embed.add_field(name="Resources", value=f"RAM: {ram}MB\nCPU: {cpu} cores\nDisk: {disk}GB", inline=False)
 CPU: {cpu} cores
 Disk: {disk}GB", inline=False)
             embed.add_field(name="Created At", value=vps_data[user_id]["created_at"], inline=False)
