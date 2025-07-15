@@ -571,7 +571,8 @@ class VPSManagementView(discord.ui.View):
             container.exec_run("pkill tmate || true")
             
             # Create new tmate session
-            result = container.exec_run("tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'", privileged=True)
+            result = container.exec_run("tmate -F", privileged=True)
+            output = result.output.decode()
             
             if result.exit_code != 0:
                 await interaction.response.send_message("❌ Error getting new session: Failed to get tmate session", ephemeral=True)
